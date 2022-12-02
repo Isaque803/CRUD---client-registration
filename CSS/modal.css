@@ -26,9 +26,10 @@
 
 .form-clients{
     max-width: 400px;
+    height: 420px;
     background-color: hsl(60, 64%, 98%);
     padding: 1rem;
-    margin: auto;
+    margin: auto auto auto auto;
     font-weight: 800;
     border-bottom: 5px solid hsl(60, 1%, 88%);
     animation: modal-anim 0.4s forwards;
@@ -126,16 +127,24 @@
     color:hsl(135, 70%, 60%);
 }
 
-
+@media (max-width: 400px){
+    @keyframes modal-anim {
+        from{
+            margin-top: 100%;
+            opacity: 0;
+        }to{
+            margin-top: 0%;
+            opacity: 1;
+        }
+    }
+}
 
 @media (max-width: 750px){
-    .active{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .modal{
+        overflow-y: scroll;
     }
-
-    .div-input{
-        width: 280px;
+    
+    .form-clients{
+        width: 100vw;
     }
 }

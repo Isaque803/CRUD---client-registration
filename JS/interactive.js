@@ -59,6 +59,7 @@ const insertClient = (client, index) => {
                         </button>
                         <div class='tooltip-btn-delete' id='tooltip${index}'>
                             <p>Tem certeza?</p>
+                            <p>Vai realmente remover ${client.name}?</p>
                             <div class='buttons-options'>
                                 <button class='btn-tooltip confirm' onclick='deleteClient(${index})'><i class='fa-sharp fa-solid fa-check'></i></button>
                                 <button class='btn-tooltip cancel' onclick='closeTooltip(${index})'><i class="fa-solid fa-xmark"></i></button>
@@ -164,18 +165,18 @@ const clearRegistration = () =>{
 function openTooltip(index){
     removeAllTootips()
     let tooltip = document.querySelector("#tooltip"+index)
-    tooltip.classList.add("active")
+    tooltip.classList.add("active-tooltip")
 }
 
 function closeTooltip(index){
     let tooltip = document.querySelector("#tooltip"+index)
-    tooltip.classList.remove("active")
+    tooltip.classList.remove("active-tooltip")
 }
 
 const removeAllTootips = () => {
-    let tooltips = document.querySelectorAll(".active")
+    let tooltips = document.querySelectorAll(".active-tooltip")
     for (let i = 0; i < tooltips.length; i++){
-        tooltips[i].classList.remove("active")
+        tooltips[i].classList.remove("active-tooltip")
     }
 }
 
