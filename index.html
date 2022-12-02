@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/modal.css">
+    <title>Cadastro de clientes</title>
+</head>
+<body>
+    <header>
+        <h1>Cadastro de Clientes</h1>
+    </header>
+    
+    <main class="container">
+        <div class="header-container">
+            <button class="btn-add-client"><i class="fa-sharp fa-solid fa-plus fa-2x"></i></button>
+            <div class="search-container">
+                <input type="text" name="search" id="search" placeholder="Pesquisar nome...">
+                <div><i class="fa-solid fa-magnifying-glass"></i></div>
+            </div>
+        </div>
+        <table class="table-clients">
+            <thead class="requirements">
+                <tr>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Celular</th>
+                    <th>Cidade</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody class="clients"></tbody>
+        </table>
+
+        <div class="modal">
+            <form class="form-clients">
+                
+                <div class="div-input">
+                    <label for="">Nome</label><br>
+                    <input type="text" name="name" id="name" placeholder="Informe um nome" maxlength="60" onkeyup="validateRegistration(0)"><br>
+                    <p>Nome não pode está vazio</p>
+                    <i class="fa-sharp fa-solid fa-circle-check correct"></i>
+                    <i class="fa-solid fa-triangle-exclamation alert"></i>
+                </div>
+                
+                <div class="div-input">
+                    <label for="">E-mail</label><br>
+                    <input type="email" name="email" id="email" placeholder="example@gmail.com" maxlength="50" onkeyup="validateRegistration(1)"><br>
+                    <p>Email parece está incorreto</p>
+                    <i class="fa-sharp fa-solid fa-circle-check correct"></i>
+                    <i class="fa-solid fa-triangle-exclamation alert"></i>
+                </div>
+                
+                <div class="div-input">
+                    <label for="">Celular</label><br>
+                    <input type="text" name="cell" id="cell" maxlength="14" placeholder="(00) 0000-0000" onkeyup="validateRegistration(2)"><br>
+                    <p>Numero parece está incorreto</p>
+                    <i class="fa-sharp fa-solid fa-circle-check correct"></i>
+                    <i class="fa-solid fa-triangle-exclamation alert"></i>
+                </div>
+
+                <div class="div-input">
+                    <label for="">Cidade</label><br>
+                    <input type="text" name="city" id="city" placeholder="Informe a cidade" maxlength="20" onkeyup="validateRegistration(3)">
+                    <p>Cidade não pode está vazio</p>
+                    <i class="fa-sharp fa-solid fa-circle-check correct"></i>
+                    <i class="fa-solid fa-triangle-exclamation alert"></i>
+                </div>
+                
+                <button class="btn-save-client">Salvar</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="JS/interactive.js"></script>
+    <script src="https://kit.fontawesome.com/78f0a022bd.js" crossorigin="anonymous"></script>
+</body>
+</html>

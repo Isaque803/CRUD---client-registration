@@ -1,0 +1,256 @@
+@font-face {
+    font-family: Caviar-dreams;
+    src: url("../Fonts/CaviarDreams.ttf");
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Caviar-dreams;
+    background-color: hsl(220, 10%, 30%);
+    padding: 1rem;
+}
+
+header{
+    text-align: center;
+    background-color: hsl(60, 64%, 98%);
+    margin: 0rem auto 2rem auto;
+    padding: 1rem 0rem;
+    max-width: 1100px;
+    border-bottom: 5px solid hsl(60, 1%, 88%);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.container{
+    padding: 1rem;
+    max-width: 1100px;
+    margin: auto;
+    background-color: hsl(60, 64%, 98%);
+    border-bottom: 5px solid hsl(60, 1%, 88%);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0rem 0.125rem 1rem 0.125rem;
+    height: 80px;
+}
+
+.search-container{
+    display: flex;
+}
+
+.search-container input{
+    border: none;
+    background-color: hsl(33, 70%, 90%);
+    border-bottom: 5px solid hsl(13, 70%, 80%);
+    padding: 0rem 1rem;
+    font-size: 1.2rem;
+    width: 300px;
+}
+
+.search-container input:focus{
+    outline: none;
+}
+
+.search-container div{
+    padding: 0.8rem 1rem;
+    background-color: hsl(199, 70%, 70%);
+    border-bottom: 5px solid hsl(220, 70%, 60%);
+    color: white;
+    font-size: 1.2rem;
+}
+
+.btn-add-client{
+    border: none;
+    background-color: hsl(135, 70%, 70%);
+    border-bottom: 5px solid hsl(155, 70%, 55%);
+    padding: 1rem 1.3rem;
+    font-family: Caviar-dreams;
+    font-weight: 800;
+    font-size: 1rem;
+    cursor: pointer;
+    color: white;
+}
+
+.btn-add-client:hover{
+    background-color: hsl(155, 70%, 60%);
+    border-bottom: none;
+    transform: translateY(5px);
+}
+
+.table-clients{
+    width: 100%;
+}
+
+.requirements th{
+    background-color: hsl(209, 70%, 70%);
+    border-bottom: 5px solid hsl(219, 70%, 60%);
+    padding: 0.5rem;
+    text-align: start;
+}
+
+.requirements th:nth-child(1){
+    width: 25%;
+}
+.requirements th:nth-child(2){
+    width: 25%;
+}
+
+.requirements th:nth-child(3){
+    width: 20%;
+}
+
+.requirements th:nth-child(4){
+    width: 15%;
+}
+
+.clients th{
+    padding: 0.6rem 0rem;
+    word-break: break-word;
+}
+
+.clients th:nth-child(5){
+    position: relative;
+}
+
+.clients tr{
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.clients tr:hover{
+    background-color: hsl(36, 70%, 90%);
+}
+
+
+.btn-th{
+    padding: 0.7rem 0.8rem;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+.btn-th i{
+    font-size: 1rem;
+}
+
+.update{
+    background-color: hsl(135, 70%, 70%);
+    border-bottom: 5px solid hsl(155, 70%, 55%);
+}
+
+.update:hover{
+    background-color: hsl(155, 70%, 55%);
+    border-bottom: none;
+    transform: translateY(5px);
+}
+
+.delete{
+    background-color: hsl(0, 70%, 70%); 
+    border-bottom: 5px solid hsl(340, 70%, 60%);
+}
+
+.delete:hover{
+    background-color: hsl(340, 70%, 60%); 
+    border-bottom: none;
+    transform: translateY(5px);
+}
+
+.tooltip-btn-delete{
+    position: absolute;
+    background-color: hsl(50, 70%, 90%);
+    width: 100%;
+    z-index: 1;
+    padding: 0.3rem;
+    top: 0px;
+    right: 0px;
+    font-size: 0.9rem;
+    display: none;
+    flex-wrap: wrap;
+}
+
+.active{
+    display: flex;
+}
+
+.btn-tooltip{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    margin-top: 0.5rem;
+}
+
+.confirm{
+    background-color: hsl(204, 70%, 70%);
+    border-bottom: 4px solid hsl(224, 70%, 60%);
+}
+
+.confirm:hover{
+    background-color: hsl(224, 70%, 60%);
+    border-bottom: 4px solid hsl(244, 70%, 50%);
+}
+
+.cancel{
+    background-color: hsl(0, 70%, 70%);
+    border-bottom: 4px solid hsl(340, 70%, 60%);
+}
+
+.cancel:hover{
+    background-color: hsl(340, 70%, 60%); 
+    border-bottom: 4px solid hsl(320, 70%, 50%); 
+}
+
+@media (max-width: 570px){
+    .search-container input{
+        font-size: 1rem;
+        width: 160px;
+    }
+
+    .search-container div{
+        padding: 0.7rem;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 750px){
+    .btn-add-client{
+        padding: 0.7rem 1rem;
+    }
+
+    .requirements{
+        display: none;
+    }
+
+    .clients th{
+        display: block;
+        text-align: start;
+        padding: 0.6rem 0.6rem;
+    }
+
+    .clients tr:hover{
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    .clients th:nth-child(1){
+        font-size: 1.3rem;
+        border-bottom: 1px solid rgb(117, 117, 117);
+        margin: 0rem 0.5rem;
+        padding: 0.6rem 0.2rem;
+    }
+
+    .clients th:nth-child(5){
+        text-align: end;
+    }
+
+    .tooltip-btn-delete{
+        width: 120px;
+    }
+}

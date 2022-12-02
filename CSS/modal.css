@@ -1,0 +1,141 @@
+@font-face {
+    font-family: Caviar-dreams;
+    src: url("../Fonts/CaviarDreams.ttf");
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.modal{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    display: none;
+    z-index: 100;
+}
+
+.active{
+    display: block;
+}
+
+.form-clients{
+    max-width: 400px;
+    background-color: hsl(60, 64%, 98%);
+    padding: 1rem;
+    margin: auto;
+    font-weight: 800;
+    border-bottom: 5px solid hsl(60, 1%, 88%);
+    animation: modal-anim 0.4s forwards;
+}
+
+@keyframes modal-anim {
+    from{
+        margin-top: 0rem;
+        opacity: 0;
+    }to{
+        margin-top: 8rem;
+        opacity: 1;
+    }
+}
+
+.form-clients input{
+    margin-top: 0.5rem;
+    width: 100%;
+    padding: 0.4rem 2.5rem 0.4rem 0.3rem;
+    font-family: Caviar-dreams;
+    font-weight: 800;
+    font-size: 1rem;
+    border-radius: 0px;
+    border: 1px solid rgb(104, 104, 104);
+}
+
+.form-clients input:focus{
+    outline: none;
+}
+
+.form-clients div:nth-child(4){
+    margin-bottom: 2rem;
+}
+
+.btn-save-client{
+    width: 100%;
+    padding: 1rem;
+    cursor: pointer;
+    border: none;
+    background-color: hsl(135, 70%, 70%);
+    border-bottom: 5px solid hsl(155, 70%, 55%);
+    font-family: Caviar-dreams;
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+.btn-save-client:hover{
+    background-color: hsl(155, 70%, 60%);
+    border-bottom: none;
+    transform: translateY(5px);
+    margin-bottom: 5px; 
+}
+
+.div-input{
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.div-input > p{
+    color: hsl(0, 80%, 60%);
+    font-size: 0.8rem;
+    right: 0px;
+    position: absolute;
+    display: none;
+}
+
+.div-input > i{
+    position: absolute;
+    right: 10px;
+    top: 35px;
+    display: none;
+}
+
+.div-input.error > input{
+    border-color: hsl(0, 70%, 60%);
+}
+
+.div-input.error > .alert, .div-input.error > p{
+    display: block;
+}
+
+.div-input.sure > input{
+    border-color: hsl(130, 70%, 60%);
+}
+
+.div-input.sure > .correct{
+    display: block;
+}
+
+.alert{
+    color:hsl(0, 70%, 60%);
+}
+
+.correct{
+    color:hsl(135, 70%, 60%);
+}
+
+
+
+@media (max-width: 750px){
+    .active{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .div-input{
+        width: 280px;
+    }
+}
