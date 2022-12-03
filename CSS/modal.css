@@ -127,7 +127,7 @@
     color:hsl(135, 70%, 60%);
 }
 
-@media (max-width: 400px){
+@media (max-width: 450px){
     @keyframes modal-anim {
         from{
             margin-top: 100%;
