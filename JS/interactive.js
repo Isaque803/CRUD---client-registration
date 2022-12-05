@@ -8,25 +8,25 @@ let modal = document.querySelector(".modal")
 let input = document.querySelectorAll(".div-input")
 let form = document.querySelector(".form-clients")
 let allInputsModal = modal.querySelectorAll("input")
+let search = document.querySelector("#search")
 
 
 let itens
 let id
 
 search.addEventListener("keyup", () => {
-    let tbodyRows, rows, search
-    
-    search = document.querySelector("#search").value.toUpperCase()
+    filterNamesClients()
+})
+
+function filterNamesClients(){
+    let tbodyRows, rows, filter
+    filter = search.value.toUpperCase()
     tbodyRows = tbody.querySelectorAll("tr")
     for (let i = 0; i < tbodyRows.length; i++){
         rows = tbodyRows[i].querySelectorAll("th")[0]
-        if (rows.innerHTML.toUpperCase().indexOf(search) !== -1){
-            tbodyRows[i].style.display = ""
-        }else{
-            tbodyRows[i].style.display = "none"
-        }
+        rows.innerHTML.toUpperCase().indexOf(filter) !== -1 ? tbodyRows[i].style.display = "" : tbodyRows[i].style.display = "none"
     }
-})
+}
 
 const getItens = () => JSON.parse(localStorage.getItem('list')) ?? []
 const setItens = () => localStorage.setItem('list', JSON.stringify(itens))
